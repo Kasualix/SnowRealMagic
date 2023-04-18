@@ -19,7 +19,7 @@ public abstract class MixinLayerDecorator {
 			), method = "fixBaseBlock"
 	)
 	private boolean srm_isIn(BlockState state, Block block) {
-		return TerraForgedModule.isIn(state, block);
+		return TerraForgedModule.isIn(state);
 	}
 
 }

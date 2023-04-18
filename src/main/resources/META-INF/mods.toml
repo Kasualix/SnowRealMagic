@@ -1,13 +1,12 @@
 modLoader="javafml"
-loaderVersion="[34,)"
+loaderVersion="[36,)"
 license="MIT"
 
 [[mods]]
 modId="snowrealmagic"
 version="${file.jarVersion}"
-displayName="Snow! Real Magic!"
-authors="Snownee"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/snowrealmagic"
+displayName="Snow Real Magic Potato Edition"
+authors="Snownee, TeamPotato"
 description="Tweak vanilla snow layer."
 
 [[dependencies.snowrealmagic]]

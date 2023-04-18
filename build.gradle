@@ -5,7 +5,7 @@ buildscript {
         maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1+', changing: true
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
     }
 }
@@ -13,7 +13,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'maven-publish'
 
-version = "${mod_version}-${mc_version}"
+version = "potato-edition-${mod_version}"
 group = "snownee.snow"
 archivesBaseName = "${modid}"
 
@@ -89,7 +89,7 @@ repositories{
 
 dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-    annotationProcessor 'org.spongepowered:mixin:0.8.2:processor'
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation fg.deobf("curse.maven:terraforged-363820:3365710")
     implementation fg.deobf("curse.maven:kiwi-303657:3536245")
     implementation fg.deobf("curse.maven:rubidium-574856:4397474")

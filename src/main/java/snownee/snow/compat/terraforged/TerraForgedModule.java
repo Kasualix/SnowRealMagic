@@ -25,7 +25,9 @@ import snownee.snow.world.gen.feature.ModIceAndSnowFeature;
 public class TerraForgedModule extends AbstractModule {
 	public static void freezeGround(IWorld world, IChunk chunk, Biome biome, BlockPos.Mutable snowPos, BlockPos.Mutable underPos) {
 		if (!biome.doesSnowGenerate(world, snowPos) && ModIceAndSnowFeature.placeAdditional(biome, world, snowPos)) {
-			chunk.removeTileEntity(snowPos);
+			if (chunk instanceof ChunkPrimer) {
+				((ChunkPrimer) chunk).deferredTileEntities.remove(snowPos);
+			}
 			BlockState blockstate = world.getBlockState(underPos);
 			if (blockstate.hasProperty(SnowyDirtBlock.SNOWY)) {
 				world.setBlockState(underPos, blockstate.with(SnowyDirtBlock.SNOWY, true), 2);
@@ -33,7 +35,7 @@ public class TerraForgedModule extends AbstractModule {
 		}
 	}
 
-	public static boolean isIn(BlockState state, Block block) {
+	public static boolean isIn(BlockState state) {
 		return state.getBlock() instanceof SnowBlock;
 	}
 
