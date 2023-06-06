@@ -1,8 +1,5 @@
 package snownee.snow;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SnowBlock;
 import net.minecraft.tags.BlockTags;
@@ -21,6 +18,9 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import snownee.snow.block.ModSnowBlock;
 import snownee.snow.entity.FallingSnowEntity;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class WorldTickHandler {
 	private static Method METHOD;

@@ -1,13 +1,12 @@
 package snownee.snow.mixin;
 
+import net.minecraft.world.biome.BiomeGenerationSettings;
+import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.gen.GenerationStage;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import net.minecraft.world.biome.BiomeGenerationSettings;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
-import net.minecraft.world.gen.GenerationStage;
 import snownee.snow.world.gen.feature.WorldModule;
 
 @Mixin(DefaultBiomeFeatures.class)

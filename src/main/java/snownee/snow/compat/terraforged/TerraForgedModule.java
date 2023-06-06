@@ -2,8 +2,6 @@ package snownee.snow.compat.terraforged;
 
 import com.terraforged.mod.api.event.SetupEvent;
 import com.terraforged.mod.api.material.layer.LayerMaterial;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowBlock;

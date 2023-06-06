@@ -1,7 +1,5 @@
 package snownee.snow.block;
 
-import java.util.Random;
-
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -30,6 +28,7 @@ import snownee.snow.ModUtil;
 import snownee.snow.SnowCommonConfig;
 
 import javax.annotation.Nonnull;
+import java.util.Random;
 
 public class SnowSlabBlock extends Block implements WaterLoggableSnowVariant {
 	protected static final VoxelShape BOTTOM_SHAPE = Block.makeCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D);

@@ -1,15 +1,9 @@
 package snownee.snow.item;
 
-import java.util.Map;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.*;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -18,6 +12,7 @@ import snownee.snow.SnowCommonConfig;
 import snownee.snow.block.ModSnowBlock;
 
 import javax.annotation.Nonnull;
+import java.util.Map;
 
 public class SnowBlockItem extends BlockItem {
 

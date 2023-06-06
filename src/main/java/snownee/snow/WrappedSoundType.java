@@ -1,13 +1,11 @@
 package snownee.snow;
 
-import java.util.Map;
-
-import javax.annotation.Nonnull;
-
 import com.google.common.collect.Maps;
-
 import net.minecraft.block.SoundType;
 import net.minecraft.util.SoundEvent;
+
+import javax.annotation.Nonnull;
+import java.util.Map;
 
 public final class WrappedSoundType extends SoundType {
 

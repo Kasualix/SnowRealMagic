@@ -1,9 +1,6 @@
 package snownee.snow.client;
 
-import java.util.Random;
-
 import com.mojang.blaze3d.matrix.MatrixStack;
-
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SnowBlock;
@@ -26,6 +23,7 @@ import snownee.snow.CoreModule;
 import snownee.snow.entity.FallingSnowEntity;
 
 import javax.annotation.Nonnull;
+import java.util.Random;
 
 @OnlyIn(Dist.CLIENT)
 public class FallingSnowRenderer extends EntityRenderer<FallingSnowEntity> {

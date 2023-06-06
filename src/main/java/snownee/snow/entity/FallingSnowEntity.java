@@ -1,19 +1,7 @@
 package snownee.snow.entity;
 
-import java.util.Random;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.FenceGateBlock;
-import net.minecraft.block.StairsBlock;
-import net.minecraft.block.WallBlock;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntitySize;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.MoverType;
-import net.minecraft.entity.Pose;
+import net.minecraft.block.*;
+import net.minecraft.entity.*;
 import net.minecraft.item.DirectionalPlaceContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -40,6 +28,7 @@ import snownee.snow.SnowCommonConfig;
 import snownee.snow.block.ModSnowBlock;
 
 import javax.annotation.Nonnull;
+import java.util.Random;
 
 public class FallingSnowEntity extends Entity {
 	public int fallTime;

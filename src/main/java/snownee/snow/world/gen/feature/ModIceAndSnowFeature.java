@@ -1,9 +1,6 @@
 package snownee.snow.world.gen.feature;
 
-import java.util.Random;
-
 import com.mojang.serialization.Codec;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SnowyDirtBlock;
@@ -22,6 +19,7 @@ import snownee.snow.SnowCommonConfig;
 import snownee.snow.block.ModSnowBlock;
 
 import javax.annotation.Nonnull;
+import java.util.Random;
 
 public class ModIceAndSnowFeature extends IceAndSnowFeature {
 
