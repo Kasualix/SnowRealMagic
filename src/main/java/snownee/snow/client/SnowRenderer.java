@@ -1,11 +1,7 @@
 package snownee.snow.client;
 
-import java.util.Objects;
-import java.util.Random;
-
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SnowBlock;
 import net.minecraft.client.Minecraft;
@@ -26,6 +22,8 @@ import net.minecraftforge.client.model.data.EmptyModelData;
 import snownee.snow.block.SnowTile;
 
 import javax.annotation.Nonnull;
+import java.util.Objects;
+import java.util.Random;
 
 @Deprecated
 @OnlyIn(Dist.CLIENT)

@@ -1,13 +1,11 @@
 package snownee.snow.mixin.terraforged;
 
+import com.terraforged.mod.chunk.column.post.LayerDecorator;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import com.terraforged.mod.chunk.column.post.LayerDecorator;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import snownee.snow.compat.terraforged.TerraForgedModule;
 
 @Mixin(LayerDecorator.class)

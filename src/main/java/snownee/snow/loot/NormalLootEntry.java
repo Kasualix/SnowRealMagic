@@ -1,20 +1,11 @@
 package snownee.snow.loot;
 
-import java.util.function.Consumer;
-
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializationContext;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
-import net.minecraft.loot.LootContext;
-import net.minecraft.loot.LootParameterSets;
-import net.minecraft.loot.LootParameters;
-import net.minecraft.loot.LootPoolEntryType;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.LootTables;
-import net.minecraft.loot.StandaloneLootEntry;
+import net.minecraft.loot.*;
 import net.minecraft.loot.conditions.ILootCondition;
 import net.minecraft.loot.functions.ILootFunction;
 import net.minecraft.tileentity.TileEntity;
@@ -25,6 +16,7 @@ import snownee.snow.CoreModule;
 import snownee.snow.block.SnowTile;
 
 import javax.annotation.Nonnull;
+import java.util.function.Consumer;
 
 public class NormalLootEntry extends StandaloneLootEntry {
 

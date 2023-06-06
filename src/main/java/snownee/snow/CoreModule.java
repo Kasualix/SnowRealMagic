@@ -1,10 +1,6 @@
 package snownee.snow;
 
-import java.util.Arrays;
-import java.util.function.Predicate;
-
 import com.google.common.collect.ImmutableSet;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -25,25 +21,16 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import snownee.kiwi.AbstractModule;
-import snownee.kiwi.KiwiModule;
+import snownee.kiwi.*;
 import snownee.kiwi.KiwiModule.Subscriber.Bus;
-import snownee.kiwi.Name;
-import snownee.kiwi.NoItem;
-import snownee.kiwi.Skip;
-import snownee.snow.block.ModSnowBlock;
-import snownee.snow.block.ModSnowTileBlock;
-import snownee.snow.block.SnowFenceBlock;
-import snownee.snow.block.SnowFenceGateBlock;
-import snownee.snow.block.SnowSlabBlock;
-import snownee.snow.block.SnowStairsBlock;
-import snownee.snow.block.SnowTextureTile;
-import snownee.snow.block.SnowTile;
-import snownee.snow.block.SnowWallBlock;
+import snownee.snow.block.*;
 import snownee.snow.client.FallingSnowRenderer;
 import snownee.snow.entity.FallingSnowEntity;
 import snownee.snow.item.SnowBlockItem;
 import snownee.snow.loot.NormalLootEntry;
+
+import java.util.Arrays;
+import java.util.function.Predicate;
 
 @KiwiModule(modid = SnowRealMagic.MODID)
 @KiwiModule.Subscriber(Bus.MOD)

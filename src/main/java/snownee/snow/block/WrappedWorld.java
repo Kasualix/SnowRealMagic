@@ -1,7 +1,5 @@
 package snownee.snow.block;
 
-import java.util.List;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
@@ -27,6 +25,7 @@ import net.minecraft.world.storage.MapData;
 import snownee.snow.CoreModule;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 
 public class WrappedWorld extends World {
 

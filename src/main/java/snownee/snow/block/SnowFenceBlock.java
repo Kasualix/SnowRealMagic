@@ -1,7 +1,5 @@
 package snownee.snow.block;
 
-import java.util.Random;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.util.math.BlockPos;
@@ -11,6 +9,7 @@ import snownee.snow.ModUtil;
 import snownee.snow.SnowCommonConfig;
 
 import javax.annotation.Nonnull;
+import java.util.Random;
 
 public class SnowFenceBlock extends FenceBlock implements WaterLoggableSnowVariant, WatcherSnowVariant {
 

@@ -1,8 +1,5 @@
 package snownee.snow.block;
 
-import java.util.Objects;
-import java.util.Random;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.StairsBlock;
@@ -17,6 +14,8 @@ import snownee.snow.ModUtil;
 import snownee.snow.SnowCommonConfig;
 
 import javax.annotation.Nonnull;
+import java.util.Objects;
+import java.util.Random;
 
 public class SnowStairsBlock extends StairsBlock implements WaterLoggableSnowVariant {
 

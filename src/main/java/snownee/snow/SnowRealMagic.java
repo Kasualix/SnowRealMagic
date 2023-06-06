@@ -1,9 +1,8 @@
 package snownee.snow;
 
+import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import net.minecraftforge.fml.common.Mod;
 
 @Mod(SnowRealMagic.MODID)
 public class SnowRealMagic {

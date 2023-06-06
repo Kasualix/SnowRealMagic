@@ -1,7 +1,5 @@
 package snownee.snow.block;
 
-import java.util.Random;
-
 import net.minecraft.block.BlockState;
 import net.minecraft.block.WallBlock;
 import net.minecraft.entity.player.PlayerEntity;
@@ -12,6 +10,7 @@ import snownee.snow.ModUtil;
 import snownee.snow.SnowCommonConfig;
 
 import javax.annotation.Nonnull;
+import java.util.Random;
 
 public class SnowWallBlock extends WallBlock implements WaterLoggableSnowVariant, WatcherSnowVariant {
 
