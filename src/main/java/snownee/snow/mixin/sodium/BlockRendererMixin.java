@@ -1,17 +1,5 @@
 package snownee.snow.mixin.sodium;
 
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Random;
-
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
 import me.jellysquid.mods.sodium.client.model.light.LightMode;
 import me.jellysquid.mods.sodium.client.model.light.LightPipeline;
 import me.jellysquid.mods.sodium.client.model.light.LightPipelineProvider;
@@ -37,16 +25,28 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.client.model.data.IModelData;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import snownee.snow.CoreModule;
 import snownee.snow.block.SnowTile;
 import snownee.snow.block.SnowTile.Options;
 import snownee.snow.block.SnowVariant;
 import snownee.snow.block.WatcherSnowVariant;
 import snownee.snow.client.ClientVariables;
-import snownee.snow.client.SnowClientConfig;
+
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Random;
 
 @Mixin(value = BlockRenderer.class, remap = false)
 public abstract class BlockRendererMixin {
+
+    @Shadow protected abstract LightMode getLightingMode(BlockState state, IBakedModel model, IBlockDisplayReader world, BlockPos pos);
 
     @Final
     @Shadow
@@ -67,7 +67,9 @@ public abstract class BlockRendererMixin {
                 !blockStateIn.hasTileEntity() ||
                 (blockStateIn.hasProperty(SnowBlock.LAYERS) && blockStateIn.get(SnowBlock.LAYERS) == 8) ||
                 (state == null || (!state.isAir() && state.getRenderType() != BlockRenderType.MODEL))
-        ) return;
+        ) {
+            return;
+        }
         try {
             RenderType cutoutMipped = RenderType.getCutoutMipped();
             RenderType solid = RenderType.getSolid();
@@ -151,7 +153,7 @@ public abstract class BlockRendererMixin {
     public boolean renderModelWithYOffset(IBlockDisplayReader world, BlockState state, BlockPos pos, IBakedModel model, ChunkModelBuffers buffers, boolean cull, long seed, IModelData modelData, double yOffset) {
         Vector3d offset = state.getOffset(world, pos);
         if (yOffset != 0) offset = offset.add(0, yOffset, 0);
-        LightPipeline lighter = this.lighters.getLighter(this.getLightingMode(state, model));
+        LightPipeline lighter = this.lighters.getLighter(this.getLightingMode(state, model, world, pos));
 
         boolean rendered = false;
 
@@ -185,8 +187,6 @@ public abstract class BlockRendererMixin {
     @Shadow
     public abstract boolean renderModel(IBlockDisplayReader world, BlockState state, BlockPos pos, IBakedModel model, ChunkModelBuffers buffers, boolean cull, long seed, IModelData modelData);
 
-    @Shadow
-    protected abstract LightMode getLightingMode(BlockState state, IBakedModel model);
 
     @Shadow
     protected abstract void renderQuadList(IBlockDisplayReader world, BlockState state, BlockPos pos, LightPipeline lighter, Vector3d offset, ChunkModelBuffers buffers, List<BakedQuad> quads, Direction facing);

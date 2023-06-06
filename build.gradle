@@ -17,7 +17,7 @@ version = "potato-edition-${mod_version}"
 group = "snownee.snow"
 archivesBaseName = "${modid}"
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
     mappings channel: "snapshot", version: "${mapping}-${mcp_version}"
@@ -92,8 +92,7 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation fg.deobf("curse.maven:terraforged-363820:3365710")
     implementation fg.deobf("curse.maven:kiwi-303657:3536245")
-    implementation fg.deobf("curse.maven:rubidium-574856:4397474")
-
+    implementation fg.deobf("curse.maven:rubidium-574856:4568759")
 }
 
 sourceSets {
